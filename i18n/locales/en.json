@@ -1,0 +1,84 @@
+{
+  "home": {
+    "home": "Home"
+  },
+  "action": {
+    "share": "Share",
+    "close": "Close",
+    "remove_all": "Remove all",
+    "submit": "Submit",
+    "remove": "Remove",
+    "back": "Back",
+    "select_option": "Select an option",
+    "next": "Next",
+    "view_all": "View all"
+  },
+  "status": {
+    "status": "Status",
+    "CREATED": "Created",
+    "IN_PROGRESS": "In progress",
+    "ON_THE_WAY": "On the way",
+    "COMPLETED": "Completed",
+    "CANCELLED": "Cancelled"
+  },
+  "product": {
+    "new": "New",
+    "add_to_cart": "Add to cart",
+    "options": "Options",
+    "buy_now": "Buy now",
+    "add_to_wishlist": "Add to wishlist",
+    "specifications": "Specifications",
+    "features": "Features",
+    "reviews": "Reviews",
+    "q_and_a": "Q&A",
+    "filters": "Filters",
+    "description": "Description",
+    "search_for_products": "Search for products",
+    "search": "Search"
+  },
+  "order": {
+    "orders": "Orders",
+    "items": "items"
+  },
+  "cart": {
+    "cart": "Cart",
+    "shopping_cart": "Shopping cart",
+    "empty": "Cart is empty",
+    "total": "Total",
+    "checkout": "Checkout",
+    "continue_shopping": "Continue shopping",
+    "summary": "Summary"
+  },
+  "checkout": {
+    "checkout_page": "Checkout page"
+  },
+  "auth": {
+    "phone": "Phone",
+    "send_code": "Send code",
+    "code": "Code",
+    "verify": "Verify",
+    "first_name": "First name",
+    "last_name": "Last name",
+    "register": "Register",
+    "logout": "Logout",
+    "login": "Login"
+  },
+  "menu": {
+    "all_categories": "All categories"
+  },
+  "question": {
+    "question": "Question",
+    "answer": "Answer",
+    "question_and_answer": "Question & answer",
+    "write_question": "Write question",
+    "topic": "Topic"
+  },
+  "review": {
+    "review": "Review",
+    "write_review": "Write review",
+    "rating": "Rating",
+    "your_review": "Your review",
+    "your_rating": "Your rating",
+    "customer_reviews": "Customer reviews"
+  }
+}

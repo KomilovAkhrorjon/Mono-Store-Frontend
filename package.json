@@ -1,0 +1,42 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/image": "^1.10.0",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/i18n": "^9.3.4",
+    "@nuxtjs/sitemap": "^7.2.9",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@vesp/nuxt-fontawesome": "^1.1.0",
+    "@vueuse/core": "^12.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lodash": "^4.17.21",
+    "lucide-vue-next": "^0.462.0",
+    "nuxt": "^3.14.1592",
+    "nuxt-gtag": "^3.0.2",
+    "radix-vue": "^1.9.10",
+    "tailwindcss-animate": "^1.0.7",
+    "vue": "latest",
+    "vue-router": "latest",
+    "vue3-carousel": "^0.8.1"
+  },
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.7.1",
+    "@fortawesome/free-regular-svg-icons": "^6.7.1",
+    "@fortawesome/free-solid-svg-icons": "^6.7.1",
+    "@nuxtjs/i18n": "^9.3.4",
+    "autoprefixer": "^10.4.20",
+    "nuxt-splide": "^1.1.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "home": {
+    "home": "Bosh sahifa"
+  },
+  "action": {
+    "share": "Ulashish",
+    "close": "Yopish",
+    "remove_all": "Barchasini olib tashlash",
+    "submit": "Yuborish",
+    "remove": "Olib tashlash",
+    "back": "Orqaga",
+    "select_option": "Variantni tanlang",
+    "next": "Keyingi",
+    "view_all": "Barchasi"
+  },
+  "status": {
+    "status": "Holat",
+    "CREATED": "Yaratilgan",
+    "IN_PROGRESS": "Jarayonda",
+    "ON_THE_WAY": "Yo'lda",
+    "COMPLETED": "Yakunlangan",
+    "CANCELLED": "Bekor qilingan"
+  },
+  "product": {
+    "new": "Yangi",
+    "add_to_cart": "Savatga qo'shish",
+    "options": "Variantlar",
+    "buy_now": "Hozir sotib olish",
+    "add_to_wishlist": "Istaklar ro'yxatiga qo'shish",
+    "specifications": "Texnik xususiyatlar",
+    "features": "Xususiyatlar",
+    "reviews": "Sharhlar",
+    "q_and_a": "Savol va javob",
+    "filters": "Filtrlar",
+    "description": "Tavsif",
+    "search_for_products": "Mahsulotlarni qidirish",
+    "search": "Qidirish"
+  },
+  "order": {
+    "orders": "Buyurtmalar",
+    "items": "ta mahsulot"
+  },
+  "cart": {
+    "cart": "Savat",
+    "shopping_cart": "Xarid savati",
+    "empty": "Savat bo'sh",
+    "total": "Jami",
+    "checkout": "Buyurtma berish",
+    "continue_shopping": "Xaridlarni davom ettirish",
+    "summary": "Umumiy ma'lumot"
+  },
+  "checkout": {
+    "checkout_page": "Buyurtma sahifasi"
+  },
+  "auth": {
+    "phone": "Telefon raqam",
+    "send_code": "Kodni yuborish",
+    "code": "Kod",
+    "verify": "Tasdiqlash",
+    "first_name": "Ism",
+    "last_name": "Familiya",
+    "register": "Ro'yxatdan o'tish",
+    "logout": "Chiqish",
+    "login": "Kirish"
+  },
+  "menu": {
+    "all_categories": "Barcha kategoriyalar"
+  },
+  "question": {
+    "question": "Savol",
+    "answer": "Javob",
+    "question_and_answer": "Savol va javob",
+    "write_question": "Savol yozish",
+    "topic": "Mavzu"
+  },
+  "review": {
+    "review": "Sharh",
+    "write_review": "Sharh yozish",
+    "rating": "Reyting",
+    "your_review": "Sizning sharhingiz",
+    "your_rating": "Sizning reytingingiz",
+    "customer_reviews": "Mijozlar sharhlari"
+  }
+}
