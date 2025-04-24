@@ -1,7 +1,7 @@
 export class HttpService {
 
-  // baseUrl: string = 'http://localhost:4407';
-  baseUrl: string = 'https://mapi.monostore.uz';
+  baseUrl: string = 'http://localhost:4407';
+  // baseUrl: string = 'https://mapi.monostore.uz';
   // fileServerUrl: string = 'http://localhost:6659/v1/document/download/';
   fileServerUrl: string = 'https://files.monostore.uz/v1/document/download/';
 

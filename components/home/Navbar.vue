@@ -95,6 +95,14 @@ onBeforeUnmount(() => {
             </flex-row>
           </rounded-link>
           <rounded-link
+              class="max-lg:hidden"
+              href="/pc-builder">
+            <flex-row class="items-center gap-2">
+              <font-awesome :icon="['fas', 'desktop']"/>
+              PC Builder
+            </flex-row>
+          </rounded-link>
+          <rounded-link
               class="max-lg:hidden relative"
               href="/cart">
             <div class="absolute top-1 left-8 bg-violet-700 text-white px-1 text-xs rounded-full"
@@ -130,6 +138,14 @@ onBeforeUnmount(() => {
               <flex-row class="items-center gap-2">
                 <font-awesome :icon="['fas', 'clipboard-list']"/>
                 {{ $t('order.orders') }}
+              </flex-row>
+            </rounded-link>
+            <rounded-link
+                @click="menu = false"
+                href="/pc-builder">
+              <flex-row class="items-center gap-2">
+                <font-awesome :icon="['fas', 'desktop']"/>
+                PC Builder
               </flex-row>
             </rounded-link>
             <rounded-btn

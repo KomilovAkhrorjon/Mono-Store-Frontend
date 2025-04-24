@@ -7,6 +7,7 @@ import Menu from "~/components/home/Menu.vue";
 import Footer from "~/components/home/Footer.vue";
 import MobilePanel from "~/components/home/MobilePanel.vue";
 import {useCartService} from "~/util/CartService";
+import ChatAssistant from "~/components/assistant/ChatAssistant.vue";
 
 let disableMainRelative = useState('disableMainRelative');
 const cartService = useCartService();
@@ -28,6 +29,8 @@ onMounted(() => {
         <flex-col class="h-full min-[1400px]:max-w-7xl justify-start w-full py-4 px-2"
                   :class="disableMainRelative ? '':'relative'">
           <NuxtPage></NuxtPage>
+          <!-- ChatAssistant button + panel will live here -->
+          <ChatAssistant />
         </flex-col>
       </flex-row>
       <Footer class="absolute bottom-0 w-full max-sm:pb-20"/>
