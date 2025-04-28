@@ -9,9 +9,16 @@
     "submit": "Submit",
     "remove": "Remove",
     "back": "Back",
-    "select_option": "Select an option",
+    "select_option": "Select option",
     "next": "Next",
-    "view_all": "View all"
+    "view_all": "View all",
+    "is_public": "Public",
+    "type_here": "Type here",
+    "title": "Title",
+    "name": "Name",
+    "save": "Save",
+    "add": "Add",
+    "payment_with": "Payment with"
   },
   "status": {
     "status": "Status",
@@ -53,7 +60,7 @@
     "checkout_page": "Checkout page"
   },
   "auth": {
-    "phone": "Phone",
+    "phone": "Phone number",
     "send_code": "Send code",
     "code": "Code",
     "verify": "Verify",
@@ -69,7 +76,7 @@
   "question": {
     "question": "Question",
     "answer": "Answer",
-    "question_and_answer": "Question & answer",
+    "question_and_answer": "Q&A",
     "write_question": "Write question",
     "topic": "Topic"
   },
@@ -80,5 +87,9 @@
     "your_review": "Your review",
     "your_rating": "Your rating",
     "customer_reviews": "Customer reviews"
+  },
+  "build": {
+    "build": "Build",
+    "add_new": "Add new"
   }
 }

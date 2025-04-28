@@ -20,6 +20,12 @@ let showDialog = ref(false);
 const searchMenu = ref(false);
 const menu = ref(false);
 let cartData = useState<any>('cartData');
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+
+const availableLocales = computed(() => {
+  return locales.value.filter(i => i.code !== locale.value)
+})
 
 const handleScroll = () => {
   const currentScrollY = window.scrollY;
@@ -97,7 +103,7 @@ onBeforeUnmount(() => {
           <rounded-link
               class="max-lg:hidden"
               href="/pc-builder">
-            <flex-row class="items-center gap-2">
+            <flex-row class="items-center gap-2 text-nowrap">
               <font-awesome :icon="['fas', 'desktop']"/>
               PC Builder
             </flex-row>
@@ -114,6 +120,9 @@ onBeforeUnmount(() => {
               {{ $t('cart.cart') }}
             </flex-row>
           </rounded-link>
+          <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
+            {{ locale.name }}
+          </NuxtLink>
           <icon-btn :icon="['fas', menu ? 'xmark':'bars']"
                     @click="menu = !menu"
                     class="lg:hidden relatives px-0.5"/>

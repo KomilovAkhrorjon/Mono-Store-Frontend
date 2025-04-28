@@ -1,0 +1,95 @@
+{
+  "home": {
+    "home": "Главная"
+  },
+  "action": {
+    "share": "Поделиться",
+    "close": "Закрыть",
+    "remove_all": "Удалить всё",
+    "submit": "Отправить",
+    "remove": "Удалить",
+    "back": "Назад",
+    "select_option": "Выбрать вариант",
+    "next": "Далее",
+    "view_all": "Посмотреть все",
+    "is_public": "Публичный",
+    "type_here": "Введите здесь",
+    "title": "Название",
+    "name": "Имя",
+    "save": "Сохранить",
+    "add": "Добавить",
+    "payment_with": "Оплата через"
+  },
+  "status": {
+    "status": "Статус",
+    "CREATED": "Создан",
+    "IN_PROGRESS": "В процессе",
+    "ON_THE_WAY": "В пути",
+    "COMPLETED": "Завершён",
+    "CANCELLED": "Отменён"
+  },
+  "product": {
+    "new": "Новый",
+    "add_to_cart": "В корзину",
+    "options": "Варианты",
+    "buy_now": "Купить сейчас",
+    "add_to_wishlist": "В избранное",
+    "specifications": "Характеристики",
+    "features": "Особенности",
+    "reviews": "Отзывы",
+    "q_and_a": "Вопросы и ответы",
+    "filters": "Фильтры",
+    "description": "Описание",
+    "search_for_products": "Поиск товаров",
+    "search": "Поиск"
+  },
+  "order": {
+    "orders": "Заказы",
+    "items": "товары"
+  },
+  "cart": {
+    "cart": "Корзина",
+    "shopping_cart": "Корзина покупок",
+    "empty": "Корзина пуста",
+    "total": "Итого",
+    "checkout": "Оформить заказ",
+    "continue_shopping": "Продолжить покупки",
+    "summary": "Итог"
+  },
+  "checkout": {
+    "checkout_page": "Страница оформления заказа"
+  },
+  "auth": {
+    "phone": "Номер телефона",
+    "send_code": "Отправить код",
+    "code": "Код",
+    "verify": "Подтвердить",
+    "first_name": "Имя",
+    "last_name": "Фамилия",
+    "register": "Регистрация",
+    "logout": "Выйти",
+    "login": "Войти"
+  },
+  "menu": {
+    "all_categories": "Все категории"
+  },
+  "question": {
+    "question": "Вопрос",
+    "answer": "Ответ",
+    "question_and_answer": "Вопросы и ответы",
+    "write_question": "Написать вопрос",
+    "topic": "Тема"
+  },
+  "review": {
+    "review": "Отзыв",
+    "write_review": "Написать отзыв",
+    "rating": "Рейтинг",
+    "your_review": "Ваш отзыв",
+    "your_rating": "Ваша оценка",
+    "customer_reviews": "Отзывы покупателей"
+  },
+  "build": {
+    "build": "Создать",
+    "add_new": "Добавить новый"
+  }
+}

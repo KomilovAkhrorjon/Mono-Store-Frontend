@@ -1,7 +1,8 @@
 export class HttpService {
 
-  baseUrl: string = 'http://localhost:4407';
-  // baseUrl: string = 'https://mapi.monostore.uz';
+  // baseUrl: string = 'http://localhost:4407';
+  // baseUrl: string = 'http://192.168.67.79:4407';
+  baseUrl: string = 'https://mapi.monostore.uz';
   // fileServerUrl: string = 'http://localhost:6659/v1/document/download/';
   fileServerUrl: string = 'https://files.monostore.uz/v1/document/download/';
 
@@ -94,6 +95,22 @@ export class HttpService {
   put(url: string, body?: any) {
     let options: any = {
       method: 'PUT',
+      body: body,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    if (this.getToken()) {
+      options['headers'] = {
+        'Authorization': this.getToken()
+      }
+    }
+    return $fetch(this.getUrl(url), options);
+  }
+
+  delete(url: string, body?: any) {
+    let options: any = {
+      method: 'DELETE',
       body: body,
       headers: {
         'Content-Type': 'application/json'

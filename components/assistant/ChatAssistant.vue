@@ -1,3 +1,47 @@
+<script setup>
+import { ref, nextTick } from 'vue'
+import ChatBot from '@/assets/icons/chatbot.png'
+import {useHttpService} from "~/util/HttpService.js";
+
+const open = ref(false)
+const draft = ref('')
+const http = useHttpService();
+const messages = ref([
+  {
+    role: 'assistant',
+    content: `Hello and welcome! I'm your shopping co‑pilot, here to simplify
+              your experience. How can I assist you today?`
+  }
+])
+
+async function sendMessage() {
+  const text = draft.value.trim()
+  if (!text) return
+
+  // 1) show the user's message
+  messages.value.push({ role: 'user', content: text })
+  draft.value = ''
+
+  // 2) call your API endpoint
+  try {
+    const res = await http.post('/v0/ai-chat', { prompt: text })
+    const answer = res.response
+    messages.value.push({ role: 'assistant', content: answer })
+  } catch (e) {
+    messages.value.push({
+      role: 'assistant',
+      content: 'Sorry, something went wrong.'
+    })
+    console.error(e)
+  }
+
+  // 3) scroll down
+  await nextTick()
+  const box = document.querySelector('main')
+  box.scrollTop = box.scrollHeight
+}
+</script>
+
 <template>
   <div>
     <!-- 1) Floating icon trigger -->
@@ -78,52 +122,6 @@
     </transition>
   </div>
 </template>
-
-<script setup>
-import { ref, nextTick } from 'vue'
-import ChatBot from '@/assets/icons/chatbot.png'
-
-const open = ref(false)
-const draft = ref('')
-const messages = ref([
-  {
-    role: 'assistant',
-    content: `Hello and welcome! I'm your shopping co‑pilot, here to simplify
-              your experience. How can I assist you today?`
-  }
-])
-
-async function sendMessage() {
-  const text = draft.value.trim()
-  if (!text) return
-
-  // 1) show the user's message
-  messages.value.push({ role: 'user', content: text })
-  draft.value = ''
-
-  // 2) call your API endpoint
-  try {
-    const res = await fetch('/api/ai-chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt: text })
-    })
-    const { answer } = await res.json()
-    messages.value.push({ role: 'assistant', content: answer })
-  } catch (e) {
-    messages.value.push({
-      role: 'assistant',
-      content: 'Sorry, something went wrong.'
-    })
-    console.error(e)
-  }
-
-  // 3) scroll down
-  await nextTick()
-  const box = document.querySelector('main')
-  box.scrollTop = box.scrollHeight
-}
-</script>
 
 <style>
 /* backdrop fade */

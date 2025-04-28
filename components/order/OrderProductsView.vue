@@ -29,6 +29,14 @@ function viewProduct(product: any) {
   router.push(`/product/${util.linkNameFormatter(product.productName)}--${product.id}`)
 }
 
+async function redirectToPayme() {
+
+  const result = await service.loadPayments(props.orderId);
+  const text = `m=587f72c72cac0d162c722ae2;ac.order_id=${result.id};a=${result.amount}`;
+  const token = btoa(text);
+  window.open(`https://checkout.paycom.uz/${token}`, '_blank')
+}
+
 onMounted(async () => {
   await service.loadOderProducts(props.orderId).then(res => {
     orderProducts.value = res
@@ -51,10 +59,10 @@ onMounted(async () => {
               <flex-row class="gap-4">
                 <flex-col class="w-auto">
                   <nuxt-img :src="getFirstImage(product)"
-                       class="shadow-sm rounded-md max-w-24"
+                            class="shadow-sm rounded-md max-w-24"
                             loading="lazy"
-                       :title="product.productName"
-                       :alt="product.productName"/>
+                            :title="product.productName"
+                            :alt="product.productName"/>
                 </flex-col>
                 <flex-col class="gap-2">
                   <flex-row class="text-mg-900 font-semibold">
@@ -75,7 +83,9 @@ onMounted(async () => {
                   {{ product.sku.quantity }} X
                 </flex-row>
                 <flex-row class="text-mg-900 font-medium text-lg">
-                  {{ util.getPriceWithCurrency(product.sku.price.discountPrice ? product.sku.price.discountPrice : product.sku.price.price, 'UZS') }}
+                  {{
+                    util.getPriceWithCurrency(product.sku.price.discountPrice ? product.sku.price.discountPrice : product.sku.price.price, 'UZS')
+                  }}
                 </flex-row>
                 <flex-row class="text-xs text-mg-800 line-through"
                           v-if="product.sku.price.discountPrice">
@@ -86,6 +96,14 @@ onMounted(async () => {
           </flex-row>
         </mono-card>
       </template>
+      <flex-row class="text-2xl justify-center items-center gap-4">
+        {{ $t('action.payment_with') }}
+        <img src="https://cdn.payme.uz/logo/payme_color.png"
+             @click="redirectToPayme"
+             class="hover:shadow-xl transition duration-200 cursor-pointer"
+             alt="Payme"
+             width="300px"/>
+      </flex-row>
     </grid>
   </template>
 </template>

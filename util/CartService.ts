@@ -34,7 +34,7 @@ export class CartService {
   }
 
   async checkoutCart() {
-    await this.http.patch(Endpoint.CART, {});
+    await this.http.post(Endpoint.ORDERS, {});
     await this.getCartCount();
   }
 }

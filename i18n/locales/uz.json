@@ -11,7 +11,14 @@
     "back": "Orqaga",
     "select_option": "Variantni tanlang",
     "next": "Keyingi",
-    "view_all": "Barchasi"
+    "view_all": "Barchasi",
+    "is_public": "Ommaviy",
+    "type_here": "Bu yerga yozing",
+    "title": "Sarlavha",
+    "name": "Nomi",
+    "save": "Saqlash",
+    "add": "Qo'shish",
+    "payment_with": "To'lov"
   },
   "status": {
     "status": "Holat",
@@ -80,5 +87,9 @@
     "your_review": "Sizning sharhingiz",
     "your_rating": "Sizning reytingingiz",
     "customer_reviews": "Mijozlar sharhlari"
+  },
+  "build": {
+    "build": "Yaratish",
+    "add_new": "Yangi qo'shish"
   }
 }

@@ -29,7 +29,17 @@ export class OrderService {
     }catch (error) {
       alert("Error while loading order products");
     }
+  }
 
+  async loadPayments(orderId: number): Promise<any> {
+    if (!this.authState) {
+      return;
+    }
+    try {
+      return await this.http.getWithParams(`${Endpoint.TO_PAYMENT}`, {orderId: orderId, paymentMethod: "PAYME"});
+    }catch (error) {
+      alert("Error while loading order payments");
+    }
   }
 }
 

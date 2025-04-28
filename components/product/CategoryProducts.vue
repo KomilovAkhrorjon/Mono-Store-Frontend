@@ -23,6 +23,14 @@ let props = defineProps({
   page: {
     type: Number,
     default: 0
+  },
+  isList: {
+    type: Boolean,
+    default: false
+  },
+  filters: {
+    type: Object,
+    default: () => ({})
   }
 });
 
@@ -51,7 +59,8 @@ async function getProducts() {
 
   let params = <any>{
     page: 0,
-    ...pageable.value
+    ...pageable.value,
+    ...props.filters,
   }
 
   if (props.category) {
@@ -75,6 +84,9 @@ onBeforeUnmount(() => {
 })
 
 watch(route, async () => {
+  await getProducts();
+})
+watch(() => props.category, async () => {
   await getProducts();
 })
 </script>
@@ -116,6 +128,7 @@ watch(route, async () => {
       </flex-row>
       <flex-row class="w-full">
         <products-grid v-show="!dataLoading"
+                       :is-list="props.isList"
                        :products="products"/>
       </flex-row>
       <pageble :current-page="pageResult.number + 1"

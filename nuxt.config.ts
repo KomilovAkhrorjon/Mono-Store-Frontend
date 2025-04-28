@@ -8,13 +8,15 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     'nuxt-gtag',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@pinia/nuxt'
   ],
   ssr: true,
   i18n:{
     locales: [
-      { code: 'uz', iso: 'uz-UZ', name: 'Uzbek', file: 'uz.json' },
-      { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
+      { code: 'uz', iso: 'uz-UZ', name: 'UZ', file: 'uz.json' },
+      { code: 'en', iso: 'en-US', name: 'EN', file: 'en.json' },
+      { code: 'ru', iso: 'ru-RU', name: 'RU', file: 'ru.json' },
     ],
     defaultLocale: 'uz',
     strategy: 'prefix',
@@ -48,6 +50,7 @@ export default defineNuxtConfig({
         'right-to-bracket',
         'right-from-bracket',
         'clipboard-list',
+          'desktop',
         'clipboard'],
       regular: ['star', 'heart', 'star-half-stroke', 'trash-can', 'circle-user', 'clipboard'],
       brands: ['twitter', 'facebook', 'instagram', 'github', 'telegram']

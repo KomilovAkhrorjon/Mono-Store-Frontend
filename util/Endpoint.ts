@@ -11,4 +11,7 @@ export enum Endpoint {
   CART = '/v0/cart',
   AUTH_ME = '/v0/auth/me',
   ORDERS = '/v0/order',
+  TO_PAYMENT = '/v0/order/to-payment',
+  BUILD_LIST = '/v0/build-list',
+  CHECKOUT_BUILD = '/v0/order/builder',
 }
